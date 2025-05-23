@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'mysql:mysql-connector-java:8.0.33'
+}
+
+application {
+    mainClass = 'com.vku.StudentManagementApp'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.vku.StudentManagementApp'
+    }
+}
